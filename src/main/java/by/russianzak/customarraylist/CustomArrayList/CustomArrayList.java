@@ -153,7 +153,7 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
    *
    * @param index the index of the element to be returned
    * @return the element at the specified position in this list
-   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size)
+   * @throws IndexOutOfBoundsException if the index is out of range
    */
   @SuppressWarnings("unchecked")
   public T get(int index) {
@@ -168,7 +168,7 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
    * @param index   the index of the element to replace
    * @param element the element to be stored at the specified position
    * @return the element previously at the specified position
-   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size)
+   * @throws IndexOutOfBoundsException if the index is out of range
    */
   @Override
   public T set(int index, T element) {
@@ -200,7 +200,7 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
    *
    * @param index   the index at which the specified element is to be inserted
    * @param element the element to be inserted
-   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index > size)
+   * @throws IndexOutOfBoundsException if the index is out of range
    */
   @Override
   public void add(int index, T element) {
@@ -232,7 +232,7 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
    * @param index the index at which to insert the first element from the specified collection
    * @param c     the collection containing elements to be added to this list
    * @return true if this list changed as a result of the call
-   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index > size)
+   * @throws IndexOutOfBoundsException if the index is out of range
    */
   @Override
   public boolean addAll(int index, Collection<? extends T> c) {
@@ -277,7 +277,7 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
    *
    * @param index the index of the element to be removed
    * @return the element that was removed from the list
-   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size)
+   * @throws IndexOutOfBoundsException if the index is out of range
    */
   @Override
   public T remove(int index) {
@@ -496,13 +496,13 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   }
 
   /**
-   * Sorts this list according to the quicksort method. All elements in the list must implement the
-   * {@link Comparable} interface.
+   * Sorts this list according to the quicksort method using the specified comparator. All elements in the list
+   * must be mutually comparable using the specified comparator.
    *
-   * @throws ClassCastException            if the list contains elements that are not mutually
-   *                                       comparable
-   * @throws UnsupportedOperationException if the elements' natural ordering is found to violate the
-   *                                       Comparable contract
+   * @param comparator the comparator to determine the order of the elements.
+   * @throws ClassCastException            if the list contains elements that are not mutually comparable
+   *                                       using the specified comparator
+   * @throws UnsupportedOperationException if the elements' ordering is found to violate the Comparator contract
    */
   public void quickSort(Comparator<? super T> comparator) {
     quickSort(elements, 0, size - 1, comparator);
