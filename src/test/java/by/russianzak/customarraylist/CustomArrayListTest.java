@@ -597,6 +597,12 @@ public class CustomArrayListTest {
   }
 
   @Test()
+  public void testRemoveWithIteratorBeforeNext() {
+    Iterator<Integer> iterator = list.iterator();
+    assertThrows(IllegalStateException.class, iterator::remove);
+  }
+
+  @Test()
   public void testIteratorOperations() {
     list.add(1);
     list.add(2);
@@ -664,22 +670,6 @@ public class CustomArrayListTest {
     assertThrows(ConcurrentModificationException.class, iterator::next);
   }
 
-  @Test()
-  public void testRemoveWithIterator() {
-    list.add(1);
-    list.add(2);
-    list.add(3);
-
-    Iterator<Integer> iterator = list.iterator();
-    assertTrue(iterator.hasNext());
-
-    iterator.next();
-    iterator.remove();
-
-    assertEquals(2, list.size());
-    assertEquals(Integer.valueOf(2), list.get(0));
-    assertEquals(Integer.valueOf(3), list.get(1));
-  }
 
   @Test
   public void testListIterator() {

@@ -13,8 +13,8 @@ import java.util.Objects;
 import java.util.function.Consumer;
 
 /**
- * CustomArrayList is a custom implementation of the {@link List} interface
- * that provides a dynamic array-based data structure.
+ * CustomArrayList is a custom implementation of the {@link List} interface that provides a dynamic
+ * array-based data structure.
  *
  * @param <T> the type of elements in this list
  */
@@ -81,12 +81,12 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   }
 
   /**
-   * Returns the index of the first occurrence of the specified element in this list,
-   * or -1 if this list does not contain the element.
+   * Returns the index of the first occurrence of the specified element in this list, or -1 if this
+   * list does not contain the element.
    *
    * @param o the element to search for
-   * @return the index of the first occurrence of the specified element in this list,
-   *         or -1 if this list does not contain the element
+   * @return the index of the first occurrence of the specified element in this list, or -1 if this
+   * list does not contain the element
    */
   @Override
   public int indexOf(Object o) {
@@ -99,12 +99,12 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   }
 
   /**
-   * Returns the index of the last occurrence of the specified element in this list,
-   * or -1 if this list does not contain the element.
+   * Returns the index of the last occurrence of the specified element in this list, or -1 if this
+   * list does not contain the element.
    *
    * @param o the element to search for
-   * @return the index of the last occurrence of the specified element in this list,
-   *         or -1 if this list does not contain the element
+   * @return the index of the last occurrence of the specified element in this list, or -1 if this
+   * list does not contain the element
    */
   @Override
   public int lastIndexOf(Object o) {
@@ -129,8 +129,8 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   /**
    * Returns an array containing all the elements in this collection.
    *
-   * @param a the array into which the elements of this collection are to be stored,
-   *          if it is big enough; otherwise, a new array of the same runtime type is allocated.
+   * @param a   the array into which the elements of this collection are to be stored, if it is big
+   *            enough; otherwise, a new array of the same runtime type is allocated.
    * @param <E> the runtime type of the array to contain the collection.
    * @return an array containing all the elements in this collection.
    */
@@ -153,8 +153,7 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
    *
    * @param index the index of the element to be returned
    * @return the element at the specified position in this list
-   * @throws IndexOutOfBoundsException if the index is out of range
-   *         (index < 0 || index >= size)
+   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size)
    */
   @SuppressWarnings("unchecked")
   public T get(int index) {
@@ -166,11 +165,10 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   /**
    * Replaces the element at the specified position in this list with the specified element.
    *
-   * @param index the index of the element to replace
+   * @param index   the index of the element to replace
    * @param element the element to be stored at the specified position
    * @return the element previously at the specified position
-   * @throws IndexOutOfBoundsException if the index is out of range
-   *         (index < 0 || index >= size)
+   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size)
    */
   @Override
   public T set(int index, T element) {
@@ -200,10 +198,9 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   /**
    * Inserts the specified element at the specified position in this list.
    *
-   * @param index the index at which the specified element is to be inserted
+   * @param index   the index at which the specified element is to be inserted
    * @param element the element to be inserted
-   * @throws IndexOutOfBoundsException if the index is out of range
-   *         (index < 0 || index > size)
+   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index > size)
    */
   @Override
   public void add(int index, T element) {
@@ -233,10 +230,9 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
    * Inserts all the elements in the specified collection into this list at the specified position.
    *
    * @param index the index at which to insert the first element from the specified collection
-   * @param c the collection containing elements to be added to this list
+   * @param c     the collection containing elements to be added to this list
    * @return true if this list changed as a result of the call
-   * @throws IndexOutOfBoundsException if the index is out of range
-   *         (index < 0 || index > size)
+   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index > size)
    */
   @Override
   public boolean addAll(int index, Collection<? extends T> c) {
@@ -281,8 +277,7 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
    *
    * @param index the index of the element to be removed
    * @return the element that was removed from the list
-   * @throws IndexOutOfBoundsException if the index is out of range
-   *         (index < 0 || index >= size)
+   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size)
    */
   @Override
   public T remove(int index) {
@@ -294,7 +289,6 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
     modificationCount++;
     return removedElement;
   }
-
 
 
   /**
@@ -380,8 +374,7 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   }
 
   /**
-   * Removes all the elements from this list.
-   * The list will be empty after this call returns.
+   * Removes all the elements from this list. The list will be empty after this call returns.
    */
   @Override
   public void clear() {
@@ -411,12 +404,12 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   }
 
   /**
-   * Returns a list iterator over the elements in this list in proper sequence,
-   * starting at the specified position in the list.
+   * Returns a list iterator over the elements in this list in proper sequence, starting at the
+   * specified position in the list.
    *
    * @param index the starting position of the list iterator
-   * @return a list iterator over the elements in this list in proper sequence,
-   * starting at the specified position in the list
+   * @return a list iterator over the elements in this list in proper sequence, starting at the
+   * specified position in the list
    * @throws IndexOutOfBoundsException if the index is out of range
    */
   @Override
@@ -427,15 +420,14 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   }
 
   /**
-   * Returns a view of the portion of this list between the specified {@code fromIndex},
-   * inclusive, and {@code toIndex}, exclusive.
+   * Returns a view of the portion of this list between the specified {@code fromIndex}, inclusive,
+   * and {@code toIndex}, exclusive.
    *
    * @param fromIndex the starting index (inclusive) of the sublist
    * @param toIndex   the ending index (exclusive) of the sublist
    * @return a view of the specified range within this list
-   * @throws IndexOutOfBoundsException if {@code fromIndex} or {@code toIndex}
-   *                                   is out of range, or if {@code fromIndex} is
-   *                                   greater than {@code toIndex}
+   * @throws IndexOutOfBoundsException if {@code fromIndex} or {@code toIndex} is out of range, or
+   *                                   if {@code fromIndex} is greater than {@code toIndex}
    */
   @Override
   public List<T> subList(int fromIndex, int toIndex) {
@@ -453,7 +445,7 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
    * or the action throws an exception.
    *
    * @param action the action to be performed for each element
-   * @throws NullPointerException       if the specified action is null
+   * @throws NullPointerException            if the specified action is null
    * @throws ConcurrentModificationException if the list was modified during the iteration
    */
   @Override
@@ -489,8 +481,8 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   }
 
   /**
-   * Sorts this list according to the order induced by the specified comparator.
-   * All elements in the list must be mutually comparable using the specified comparator.
+   * Sorts this list according to the order induced by the specified comparator. All elements in the
+   * list must be mutually comparable using the specified comparator.
    *
    * @param comparator the comparator to determine the order of the list
    * @throws IllegalArgumentException if the list contains elements that are not mutually comparable
@@ -504,11 +496,13 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
   }
 
   /**
-   * Sorts this list according to the quicksort method.
-   * All elements in the list must implement the {@link Comparable} interface.
+   * Sorts this list according to the quicksort method. All elements in the list must implement the
+   * {@link Comparable} interface.
    *
-   * @throws ClassCastException if the list contains elements that are not mutually comparable
-   * @throws UnsupportedOperationException if the elements' natural ordering is found to violate the Comparable contract
+   * @throws ClassCastException            if the list contains elements that are not mutually
+   *                                       comparable
+   * @throws UnsupportedOperationException if the elements' natural ordering is found to violate the
+   *                                       Comparable contract
    */
   public void quickSort(Comparator<? super T> comparator) {
     quickSort(elements, 0, size - 1, comparator);
@@ -578,6 +572,7 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
    * An iterator over the elements in this list.
    */
   private class CustomArrayListIterator implements ListIterator<T> {
+
     private int currentIndex;
     private int expectedModCount;
 
@@ -674,23 +669,31 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
     /**
      * Removes the last element returned by {@code next()} or {@code previous()} from the list.
      *
-     * @throws ConcurrentModificationException if the list was modified after the last call to {@code next()}
-     *                                       or {@code previous()}
+     * @throws ConcurrentModificationException if the list was modified after the last call to
+     *                                         {@code next()} or {@code previous()}
+     * @throws IllegalStateException           if the method was called before any {@code next()} or
+     *                                         or {@code previous()}
      */
     @Override
     public void remove() {
       checkForModification();
+
+      if (currentIndex - 1 == -1) {
+        throw new IllegalStateException();
+      }
+
       CustomArrayList.this.remove(currentIndex - 1);
       currentIndex--;
       expectedModCount = modificationCount;
     }
 
     /**
-     * Replaces the last element returned by {@code next()} or {@code previous()} with the specified element.
+     * Replaces the last element returned by {@code next()} or {@code previous()} with the specified
+     * element.
      *
      * @param element the element to replace the last returned element
-     * @throws ConcurrentModificationException if the list was modified after the last call to {@code next()}
-     *                                       or {@code previous()}
+     * @throws ConcurrentModificationException if the list was modified after the last call to
+     *                                         {@code next()} or {@code previous()}
      */
     @Override
     public void set(T element) {
@@ -700,12 +703,13 @@ public class CustomArrayList<T> extends AbstractList<T> implements List<T> {
     }
 
     /**
-     * Inserts the specified element into the list immediately before the next element that would be returned by
-     * {@code next()}, if any, and after the next element that would be returned by {@code previous()}, if any.
+     * Inserts the specified element into the list immediately before the next element that would be
+     * returned by {@code next()}, if any, and after the next element that would be returned by
+     * {@code previous()}, if any.
      *
      * @param element the element to insert
-     * @throws ConcurrentModificationException if the list was modified after the last call to {@code next()}
-     *                                       or {@code previous()}
+     * @throws ConcurrentModificationException if the list was modified after the last call to
+     *                                         {@code next()} or {@code previous()}
      */
     @Override
     public void add(T element) {
